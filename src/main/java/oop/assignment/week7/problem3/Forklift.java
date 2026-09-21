@@ -1,0 +1,25 @@
+public class Forklift
+        extends ServiceableVehicle
+        implements Insurable {
+
+    protected String assetTag;
+
+    public Forklift(String assetTag) {
+        this.assetTag = assetTag;
+    }
+
+    @Override
+    public String performMaintenance() {
+
+        return "Forklift "
+                + assetTag
+                + ": hydraulic and fork inspection complete";
+    }
+
+    @Override
+    public String getInsuranceInfo() {
+
+        return "Insured under fleet policy - Asset "
+                + assetTag;
+    }
+}
